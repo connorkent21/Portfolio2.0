@@ -5,6 +5,9 @@ import { makeStyles } from "@material-ui/core/styles"
 import Container from "@material-ui/core/Container"
 import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
+import { useTheme } from "@material-ui/core/styles"
+
 import { LandingStyles } from "../../Styles/LandingStyles"
 
 const sectionStyles = makeStyles(theme => ({
@@ -22,6 +25,9 @@ function Section(props, ref) {
   const classes = LandingStyles()
   const sectionClasses = sectionStyles()
 
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
+
   return (
     <main
       className={classNames(classes.content, contentClass)}
@@ -30,7 +36,11 @@ function Section(props, ref) {
       <Container maxWidth="xl" className={classes.container}>
         <div className={classes.contentLayoutContent}>
           {title && (
-            <Typography variant="h3" className={sectionClasses.title}>
+            <Typography
+              variant="h3"
+              className={sectionClasses.title}
+              align={isMobile ? "center" : ""}
+            >
               {title}
             </Typography>
           )}

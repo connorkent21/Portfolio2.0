@@ -136,6 +136,6 @@ export const LandingStyles = makeStyles(theme => ({
   code: {
     fontFamily: "'Source Code Pro', monospace",
     color: "rgba(0,0,0,0.5)",
-    fontSize: "1.1rem",
+    fontSize: "1rem",
   },
 }))

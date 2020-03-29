@@ -40,12 +40,17 @@ function Landing(props, ref) {
         <ContentItem fullHeight centerContent half>
           <Typography variant="h1">Connor Kent</Typography>
           <Typography className={classes.code}>
-            <Typist>$ Full Stack Developer / Mechatronics Engineer</Typist>
+            <Typist>
+              $ Full Stack Developer / Mechatronics Eng. @ UWaterloo
+            </Typist>
           </Typography>
         </ContentItem>
         <ContentItem fullHeight centerContent half column>
           <Avatar
-            style={{ width: "22rem", height: "22rem" }}
+            style={{
+              width: isMobile ? "20rem" : "23rem",
+              height: isMobile ? "20rem" : "23rem",
+            }}
             avatarStyle="Circle"
             topType="ShortHairShortWaved"
             accessoriesType="Prescription02"
