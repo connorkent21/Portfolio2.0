@@ -64,7 +64,7 @@ export const LandingStyles = makeStyles(theme => ({
   content: {
     flexGrow: 1,
     overflow: "auto",
-    backgroundColor: "#efeefe",
+    // backgroundColor: "#efeefe",
   },
   container: {
     height: "100%",
