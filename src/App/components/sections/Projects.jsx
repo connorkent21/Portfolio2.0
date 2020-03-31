@@ -8,7 +8,7 @@ import ProjectCard from "../ProjectCard"
 
 const projectsStyles = makeStyles(theme => ({
   section: {
-    backgroundColor: "#dedede",
+    backgroundColor: "#dedede4d",
   },
 }))
 
