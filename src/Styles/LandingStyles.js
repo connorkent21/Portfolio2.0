@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles"
 
 const drawerWidth = 0
 
-export const LandingStyles = makeStyles(theme => ({
+export const LandingStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
   },
@@ -135,7 +135,10 @@ export const LandingStyles = makeStyles(theme => ({
   },
   code: {
     fontFamily: "'Source Code Pro', monospace",
-    color: "rgba(0,0,0,0.5)",
+    color:
+      theme.palette.type === "dark"
+        ? "rgba(255, 255, 255, 0.5)"
+        : "rgba(0,0,0,0.5)",
     fontSize: "1rem",
   },
 }))

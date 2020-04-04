@@ -1,11 +1,21 @@
 import { createMuiTheme } from "@material-ui/core/styles"
 
-export const MaterialTheme = createMuiTheme({
-  palette: {
-    primary: { main: "#65c9ff" },
-    secondary: { main: "#7367ff" },
-  },
-  typography: {
-    fontFamily: ["Raleway"],
-  },
-})
+export function getThemeType(theme) {
+  return createMuiTheme({
+    palette: {
+      type: theme.paletteType,
+      background: {
+        default: theme.paletteType === "light" ? "#fff" : "#222831",
+        paper: theme.paletteType === "light" ? "#fff" : "#222831",
+      },
+      primary: { main: "#65c9ff" },
+      secondary: { main: "#7367ff" },
+      contrastThreshold: 5,
+
+      tonalOffset: 0.4,
+    },
+    typography: {
+      fontFamily: ["Raleway"],
+    },
+  })
+}

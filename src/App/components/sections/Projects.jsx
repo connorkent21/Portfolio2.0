@@ -6,9 +6,9 @@ import Button from "@material-ui/core/Button"
 import Section from "../Section"
 import ProjectCard from "../ProjectCard"
 
-const projectsStyles = makeStyles(theme => ({
+const projectsStyles = makeStyles((theme) => ({
   section: {
-    backgroundColor: "#dedede",
+    backgroundColor: theme.palette.type === "dark" ? "#393e46" : "#dedede",
   },
 }))
 

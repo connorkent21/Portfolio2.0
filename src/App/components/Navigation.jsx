@@ -1,11 +1,15 @@
 import React from "react"
-
 import { makeStyles } from "@material-ui/core/styles"
 import AppBar from "@material-ui/core/AppBar"
 import Button from "@material-ui/core/Button"
 import Toolbar from "@material-ui/core/Toolbar"
+import Switch from "@material-ui/core/Switch"
+import { useTheme } from "@material-ui/core/styles"
 
-const navStyles = makeStyles(theme => ({
+import Brightness5Icon from "@material-ui/icons/Brightness5"
+import Brightness3Icon from "@material-ui/icons/Brightness3"
+
+const navStyles = makeStyles((theme) => ({
   appbar: {
     background: "transparent",
   },
@@ -14,10 +18,18 @@ const navStyles = makeStyles(theme => ({
   },
 }))
 
+const THEME_TYPES = ["dark", "light"]
+
 export default function Navigation(props) {
   const classes = navStyles()
+  const theme = useTheme()
+  const { updateTheme } = props
 
-  const handleScrollTo = id => {
+  const handleThemeChange = (event) => {
+    updateTheme(THEME_TYPES[Number(event.target.checked)])
+  }
+
+  const handleScrollTo = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" })
   }
 
@@ -38,7 +50,24 @@ export default function Navigation(props) {
               onClick={() => handleScrollTo("landing")}
             />
           </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            {theme.palette.type === "light" ? (
+              <Brightness5Icon color="secondary" />
+            ) : (
+              <Brightness3Icon />
+            )}
+          </div>
           <nav>
+            <Switch
+              onChange={handleThemeChange}
+              checked={theme.palette.type === "light"}
+            />
             <Button
               variant="text"
               color="secondary"

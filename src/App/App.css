@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -43,9 +43,24 @@
   transition: color 0.2s;
 }
 
+.faIconDark {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.3);
+  transition: color 0.2s;
+}
+
+.helperIcon {
+  font-size: 1.5rem;
+}
+
 .faIcon:hover {
   cursor: pointer;
   color: rgba(115, 103, 255, 0.6);
+}
+
+.faIconDark:hover {
+  cursor: pointer;
+  color: rgba(115, 103, 255, 0.4);
 }
 
 .cardImage {

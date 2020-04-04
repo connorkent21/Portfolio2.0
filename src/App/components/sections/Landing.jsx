@@ -17,7 +17,7 @@ import { useTheme } from "@material-ui/core/styles"
 
 import { LandingStyles } from "../../../Styles/LandingStyles"
 
-const contentStyles = makeStyles(theme => ({
+const contentStyles = makeStyles((theme) => ({
   container: {
     minHeight: "100vh",
   },
@@ -40,8 +40,17 @@ function Landing(props, ref) {
         <ContentItem fullHeight centerContent half>
           <Typography variant="h1">Connor Kent</Typography>
           <Typography className={classes.code}>
-            <Typist>
-              $ Full Stack Developer / Mechatronics Eng. @ UWaterloo
+            <Typist
+              cursor={{
+                show: true,
+                blink: true,
+                element: "|",
+                hideWhenDone: true,
+                hideWhenDoneDelay: 1000,
+              }}
+              avgTypingDelay={50}
+            >
+              $ Software Developer / Mechatronics Eng. @ UWaterloo
             </Typist>
           </Typography>
         </ContentItem>
@@ -78,21 +87,36 @@ function Landing(props, ref) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faGithubSquare} className="faIcon" />
+              <FontAwesomeIcon
+                icon={faGithubSquare}
+                className={
+                  theme.palette.type === "dark" ? "faIconDark" : "faIcon"
+                }
+              />
             </a>
             <a
               href="https://www.linkedin.com/in/connorkent1"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faLinkedin} className="faIcon" />
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                className={
+                  theme.palette.type === "dark" ? "faIconDark" : "faIcon"
+                }
+              />
             </a>
             <a
               href="https://medium.com/@connorkent"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faMedium} className="faIcon" />
+              <FontAwesomeIcon
+                icon={faMedium}
+                className={
+                  theme.palette.type === "dark" ? "faIconDark" : "faIcon"
+                }
+              />
             </a>
           </div>
         </ContentItem>

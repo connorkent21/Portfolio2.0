@@ -34,7 +34,7 @@ export default function ProjectCard(props) {
             backgroundSize: "70% auto",
             backgroundPosition: "center",
             backgroundColor: bg,
-            boxShadow: "inset 0 0 5px rgba(0,0,0,0.5)",
+            border: "0.5px rgba(0,0,0,0.3) solid",
           }}
           className="cardImage"
         />
