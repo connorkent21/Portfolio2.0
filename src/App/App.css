@@ -76,7 +76,7 @@ body::-webkit-scrollbar-thumb {
 
 .faIconDark:hover {
   cursor: pointer;
-  color: rgba(115, 103, 255, 0.4);
+  color: rgba(126, 119, 202, 1);
 }
 
 .cardImage {

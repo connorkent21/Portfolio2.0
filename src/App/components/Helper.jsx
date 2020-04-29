@@ -24,9 +24,9 @@ const HelperStyles = makeStyles((theme) => ({
     },
   },
   fab: {
-    backgroundColor: "#7367ff",
+    backgroundColor: "#7e77ca",
     "&:hover": {
-      backgroundColor: "#7367ff",
+      backgroundColor: "#7e77ca",
     },
   },
 }))
