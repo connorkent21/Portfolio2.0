@@ -1,19 +1,19 @@
-import React from "react"
+import React from "react";
 
-import { makeStyles } from "@material-ui/core/styles"
-import Button from "@material-ui/core/Button"
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
 
-import Section from "../Section"
-import ProjectCard from "../ProjectCard"
+import Section from "../Section";
+import ProjectCard from "../ProjectCard";
 
 const projectsStyles = makeStyles((theme) => ({
   section: {
-    backgroundColor: theme.palette.type === "dark" ? "#393e46" : "#dedede",
+    backgroundColor: theme.palette.type === "dark" ? "#393e46" : "#f5f5f5",
   },
-}))
+}));
 
 export default function Projects() {
-  const contentStyles = projectsStyles()
+  const contentStyles = projectsStyles();
 
   return (
     <Section
@@ -54,13 +54,6 @@ export default function Projects() {
         githubLink="https://github.com/connorkent21/Extra2048"
       />
       <ProjectCard
-        bg="#65c9ff"
-        img="https://res.cloudinary.com/ckportfolio/image/upload/v1585494758/Portfolio2.0/cochlear.png"
-        title="Cochlear Implant Simulation"
-        description="This cochlear implant simulation demonstrates various signal processing techniques. It works by filtering a given signal over n number of bands using IIR filtering, generating envelopes using lowpass filtering and stitching samplez back together using amplitude modulation."
-        githubLink="https://github.com/connorkent21/cochlear-simulation"
-      />
-      <ProjectCard
         bg="#000"
         img="https://res.cloudinary.com/ckportfolio/image/upload/v1585496689/Portfolio2.0/snake.jpg"
         title="LPC1760 Snake"
@@ -68,12 +61,17 @@ export default function Projects() {
         githubLink="https://github.com/connorkent21/LPCSnake"
       />
       <ProjectCard
-        bg="#fff"
-        img="https://res.cloudinary.com/ckportfolio/image/upload/v1585496509/Portfolio2.0/mcb1700_board.jpg"
+        img="https://res.cloudinary.com/ckportfolio/image/upload/v1608524947/aid.png"
+        title="Cochlear Implant Simulation"
+        description="This cochlear implant simulation demonstrates various signal processing techniques. It works by filtering a given signal over n number of bands using IIR filtering, generating envelopes using lowpass filtering and stitching samplez back together using amplitude modulation."
+        githubLink="https://github.com/connorkent21/cochlear-simulation"
+      />
+      <ProjectCard
+        img="https://res.cloudinary.com/ckportfolio/image/upload/v1608525277/queue.png"
         title="Real-time Messaging Queue Implementation"
         description="An implementation of message queuing simulating communication between server and clients using the LPC1760 board. This code creates multiple client/server threads and manages their communication to ensure a steady flow of messages being processed from each client."
         githubLink="https://github.com/connorkent21/LPCMessagingQueues"
       />
     </Section>
-  )
+  );
 }

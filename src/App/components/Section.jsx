@@ -1,16 +1,16 @@
-import React from "react"
-import classNames from "classnames"
+import React from "react";
+import classNames from "classnames";
 
-import { makeStyles } from "@material-ui/core/styles"
-import Container from "@material-ui/core/Container"
-import Grid from "@material-ui/core/Grid"
-import Typography from "@material-ui/core/Typography"
-import useMediaQuery from "@material-ui/core/useMediaQuery"
-import { useTheme } from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useTheme } from "@material-ui/core/styles";
 
-import { LandingStyles } from "../../Styles/LandingStyles"
+import { LandingStyles } from "../../Styles/LandingStyles";
 
-const sectionStyles = makeStyles(theme => ({
+const sectionStyles = makeStyles((theme) => ({
   container: {
     height: "100vh",
     backgroundColor: "blue",
@@ -18,15 +18,15 @@ const sectionStyles = makeStyles(theme => ({
   title: {
     padding: "32px",
   },
-}))
+}));
 
 function Section(props, ref) {
-  const { children, centered, row, contentClass, title, containerId } = props
-  const classes = LandingStyles()
-  const sectionClasses = sectionStyles()
+  const { children, centered, row, contentClass, title, containerId } = props;
+  const classes = LandingStyles();
+  const sectionClasses = sectionStyles();
 
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <main
@@ -46,7 +46,7 @@ function Section(props, ref) {
           )}
           <Grid
             container
-            spacing={3}
+            spacing={8}
             className={classNames(
               { [classes.centerGrid]: centered, [classes.flexRow]: row },
               classes.grid
@@ -57,7 +57,7 @@ function Section(props, ref) {
         </div>
       </Container>
     </main>
-  )
+  );
 }
 
-export default Section
+export default Section;

@@ -1,29 +1,30 @@
-import React from "react"
-import { makeStyles } from "@material-ui/core/styles"
-import Button from "@material-ui/core/Button"
-import Typography from "@material-ui/core/Typography"
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 
-import useMediaQuery from "@material-ui/core/useMediaQuery"
-import { useTheme } from "@material-ui/core/styles"
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useTheme } from "@material-ui/core/styles";
 
-import ContentItem from "./ContentItem"
+import ContentItem from "./ContentItem";
 
 const useStyles = makeStyles({
   root: {
     padding: "0px",
+    borderRadius: "10px",
   },
   title: {
     fontWeight: 500,
     fontSize: "1.3rem",
   },
-})
+});
 
 export default function ProjectCard(props) {
-  const classes = useStyles()
-  const { bg, liveLink, githubLink, title, description, img, buttons } = props
+  const classes = useStyles();
+  const { bg, liveLink, githubLink, title, description, img, buttons } = props;
 
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <ContentItem fixedHeightLarge paper className={classes.root}>
@@ -34,7 +35,6 @@ export default function ProjectCard(props) {
             backgroundSize: "70% auto",
             backgroundPosition: "center",
             backgroundColor: bg,
-            border: "0.5px rgba(0,0,0,0.3) solid",
           }}
           className="cardImage"
         />
@@ -78,5 +78,5 @@ export default function ProjectCard(props) {
         </div>
       </div>
     </ContentItem>
-  )
+  );
 }
