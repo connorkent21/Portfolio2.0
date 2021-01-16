@@ -63,8 +63,7 @@ export const LandingStyles = makeStyles((theme) => ({
   appBarSpacer: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
-    overflow: "auto",
-    // backgroundColor: "#efeefe",
+    overflow: "hidden",
   },
   container: {
     height: "100%",
